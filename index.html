@@ -1,121 +1,60 @@
 <!doctype html>
 
-<!-- MULTI 170 Web Design with Adobe Dreamweaver Float Layout Sample Page -->
+<!-- MULTI 170 Web Design with Adobe Dreamweaver CSS Color Fundamentals Page -->
+
+<!-- CSS Color Terminology and Definitions
+			- Color can be defined in several different ways
+				- By color name
+				- By RGB (red green blue)
+				- By HSL (hue saturation value)
+				- By hexidecimal value
+
+				- RGB and HSL have the added option to set transparency via an alpha
+-->
 
 <html lang="en-us">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Float Layout Sample</title>
+	<title>CSS Color Fundamentals</title>
 	
 	<style>
-		*{
-			box-sizing: border-box;
-		}
 		
-		header{
-			background-color: darkgrey;
-			padding: 25px;
-			text-align: center;
-			font-size: 30px;	
+		/* Set a background color for the entire page */
+		body{
+			background-color: cadetblue;
 		}
-		
-		nav{
-			background-color: black;
-			text-align: right;
-			padding: 5px;
-		}
-		
-		nav ul{
-			list-style-type: none;
-		}
-		
-		nav li{
-			display: inline;
-		}
-		
-		nav a:link{
-			color: white;
-			text-decoration: none;
-			font-size: 20px;
-			padding-left: 20px;
-			padding-right: 20px;
-		}
-		
-		nav a:visited{
-			color: purple;
-		}
-		
-		nav a:hover{
-			color: cyan;
-		}
-		
-		.row:after{
-			content: "";
-			display: table;
-			clear: both;
-		}
-		
-		.column{
-			width: 33.3%;
-			height: 400px;
-			padding: 2em;
-			float: left;
-		}
-		
-		.column h2{
-			text-align: center;
-		}
-		
-		footer{
-			background-color: darkgrey;
-			padding: 15px;
-			text-align: center;
-			font-size: 15px;
-		}
-		
 	</style>
 </head>
 
 <body>
-	<header>
-		<h1>Header</h1>
-	</header>
 	
-	<nav>
-		<ul>
-			<li><a href="#">Link 1</a></li>
-			<li><a href="#">Link 2</a></li>
-			<li><a href="#">Link 3</a></li>
-			<li><a href="#">Link 4</a></li>
-		</ul>
-	</nav>
+	<!-- Color by name -->
+	<h1 style="background-color: grey; color: white;">Color by Name</h1>
 	
-	<main>
-		<div class="row">
-			<section>
-				<div class="column" style="background-color: aliceblue;">
-					<h2>Column Left</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur cum enim veniam reprehenderit dicta, eveniet repellat, vel doloremque reiciendis nostrum ad sint commodi velit vero ipsam hic debitis ex maiores aut accusamus voluptate placeat quaerat. Ex odit commodi suscipit consequuntur voluptate placeat eius eligendi, est consequatur sapiente aperiam unde quidem.</p>
-				</div>
-			</section>
-			<section>
-				<div class="column" style="background-color: antiquewhite;">
-					<h2>Column Center</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur cum enim veniam reprehenderit dicta, eveniet repellat, vel doloremque reiciendis nostrum ad sint commodi velit vero ipsam hic debitis ex maiores aut accusamus voluptate placeat quaerat. Ex odit commodi suscipit consequuntur voluptate placeat eius eligendi, est consequatur sapiente aperiam unde quidem.</p>
-				</div>
-			</section>
-			<section>
-				<div class="column" style="background-color: honeydew;">
-					<h2>Column Right</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur cum enim veniam reprehenderit dicta, eveniet repellat, vel doloremque reiciendis nostrum ad sint commodi velit vero ipsam hic debitis ex maiores aut accusamus voluptate placeat quaerat. Ex odit commodi suscipit consequuntur voluptate placeat eius eligendi, est consequatur sapiente aperiam unde quidem.</p>
-				</div>
-			</section>
-		</div>
-	</main>
+	<!-- Color by RGBA - Red | Green | Blue | Alpha
+			- RGB mixes three primary colors in levels ranging from 0 to 255
+			- Red = 255, 0, 0 | Green = 0, 255, 0 | Blue = 0, 0, 255 | Black = 0 , 0, 0 | White = 255, 255, 255
+			- The alpha creates transparency with 0 being fully transparent and 1 being fully opaque
+-->
+	<h1 style="background-color: rgba(118,98,130,1.00); color: rgba(39,47,73,1.00);">Color by RGB</h1>
+	<h1 style="background-color: rgba(118,98,130,0.5); color: rgba(39,47,73,1.00);">Same Color as Above Except 50% Transparent</h1>
 	
-	<footer>
-		<h2>Footer Git sample page</h2>
-	</footer>
+	<!-- Color by HSL - Red | Green | Blue | Alpha
+			- HSL mixes color based on hue, saturation, and lightness
+				- Hue = the color's position on the color wheel - ranges from 0 to 359
+				- Saturation = the color's 'purity' or 'intensity' - ranges from 0% (no color) to 100% (intense color)
+				- Lightness = The color's brightness - ranges from 0% (black) to 100% (white)
+-->
+	<h1 style="background-color: hsla(163,69%,24%,1.00); color: hsla(9,100%,15%,1.00);">Color by HSL</h1>
+	<h1 style="background-color: hsla(163,69%,24%,0.5); color: hsla(9,100%,15%,1.00);">Same Color as Above Except 50% Transparent</h1>
+	
+	<!-- Color by Hexidecimal Value
+			- Hexidecimal value uses six combinations of numbers and letters ranging from 0-9 and a-f - ######
+			- Red = ff0000 | Green = 00ff00 | Blue = 0000ff | Black = 000000 | white = ffffff
+			- Hexidecimal is the most common means of identifying color in web design because it is the most efficient for web browsers
+-->
+	<h1 style="background-color: #B98100; color: #1C542A;">Color by Hexidecimal Value</h1>
+	
 </body>
 </html>
